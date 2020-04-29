@@ -242,23 +242,23 @@ console.log(averageAge)
 
 // Вивести тільки унікальні хоббі працівників.
 
-let whatever = []
+let proffessionsArray = []
 let allProffessions = [];
 peopleCollection.filter(person => allProffessions.push(person.hobby));
 console.log(allProffessions)
 for (let i = 0; i < allProffessions.length; i++) {
     for (let j = 0; j < i; j++) {
         if (allProffessions[i][j] !== undefined) {
-            whatever.push(allProffessions[i][j])
+            proffessionsArray.push(allProffessions[i][j])
         }
     }
 };
-console.log(whatever)
+console.log(proffessionsArray)
 
 const checkWork = (value, index, self) => {
     return self.indexOf(value) === index;
 };
-const uniqueHobby = whatever.filter(checkWork);
+const uniqueHobby = proffessionsArray.filter(checkWork);
 console.log(uniqueHobby);
 
 // //CLASSWORK
